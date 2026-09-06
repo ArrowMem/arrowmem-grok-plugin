@@ -17,8 +17,6 @@ Grok will discover the available tools and make them usable in conversation.
 
 No account or key needed for these:
 
-- **check_ollama_loopback** - checks whether your self-hosted Ollama server is
-  reachable from outside your machine, and gives you the complete fix if it is
 - **get_privacy_model** - the privacy and security architecture behind ArrowMem
 - **get_arrowbridge_info** - running a model on hardware you own, reachable from
   your phone, with no internet in the path
@@ -28,8 +26,7 @@ No account or key needed for these:
 - **get_org_info** - what ArrowMem is and who operates it
 - **list_packs** - the assistant packs ArrowMem runs
 
-Two further tools, a full Ollama hardening guide and a complete install checker,
-require an API key from an ArrowMem subscription.
+A full Ollama hardening guide requires an API key from an ArrowMem subscription.
 
 ## About
 
