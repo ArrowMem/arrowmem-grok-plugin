@@ -25,8 +25,11 @@ No account or key needed for these:
   sits in, how you delete it, and what proof you get
 - **get_org_info** - what ArrowMem is and who operates it
 - **list_packs** - the assistant packs ArrowMem runs
+- **check_ollama_loopback** - checks whether your Ollama install is reachable
+  from your network or bound to your own machine only
 
-A full Ollama hardening guide requires an API key from an ArrowMem subscription.
+The full hardening guide and the deeper hardening check require an API key from
+an ArrowMem subscription.
 
 ## About
 
