@@ -1,6 +1,6 @@
 # ArrowMem for Grok
 
-Security and privacy tools for people running their own local AI models.
+Security and privacy tools for people running local AI models and MCP agents.
 
 ## Use it today
 
@@ -13,10 +13,32 @@ right now as a custom connector:
 
 Grok will discover the available tools and make them usable in conversation.
 
+## How it works
+
+**These tools never reach your machine.** Grok runs the diagnostic commands
+locally and passes their output in as arguments. Nothing you submit is stored,
+logged or retained, and each call is evaluated on its own.
+
+Every check returns **pass**, **fail**, or **unverifiable**. If you did not
+supply the data a check needs, it says so and tells you the command to run. It
+never reports a pass it did not verify.
+
 ## What it does
 
 No account or key needed for these:
 
+- **inventory_ai_agents** - lists every MCP server configured on your machine
+  (Claude Desktop, Claude Code, Cursor) and every tool each one exposes, with a
+  hash per tool, so you can tell when a tool you already approved changes what
+  it does. Hosts that keep their configuration in your provider account rather
+  than on your machine cannot be read locally by anyone, and it names those as
+  unchecked rather than leaving them out of the report
+- **check_ollama_loopback** - checks whether your Ollama install is reachable
+  from your network or bound to your own machine only
+- **check_ollama_hardening** - the fuller check: bind address, the reverse proxy
+  and its configuration, disk encryption
+- **get_hardening_guide** - the complete, live-tested procedure for hardening a
+  self-hosted Ollama server
 - **get_privacy_model** - the privacy and security architecture behind ArrowMem
 - **get_arrowbridge_info** - running a model on hardware you own, reachable from
   your phone, with no internet in the path
@@ -25,11 +47,12 @@ No account or key needed for these:
   sits in, how you delete it, and what proof you get
 - **get_org_info** - what ArrowMem is and who operates it
 - **list_packs** - the assistant packs ArrowMem runs
-- **check_ollama_loopback** - checks whether your Ollama install is reachable
-  from your network or bound to your own machine only
 
-The full hardening guide and the deeper hardening check require an API key from
-an ArrowMem subscription.
+One tool needs an API key:
+
+- **check_exposed_services** - the whole-machine sweep: Postgres, MongoDB, Redis,
+  Elasticsearch, Jupyter and Ollama, plus firewall state, disk encryption, screen
+  lock and pending updates
 
 ## About
 
