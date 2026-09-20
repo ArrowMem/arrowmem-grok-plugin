@@ -48,15 +48,6 @@ No account or key needed for these:
 - **get_org_info** - what ArrowMem is and who operates it
 - **list_packs** - the assistant packs ArrowMem runs
 
-Two tools need an API key, and are not part of this free listing:
-
-- **check_exposed_services** - the whole-machine sweep: Postgres, MongoDB, Redis,
-  Elasticsearch, Jupyter and Ollama, plus firewall state, disk encryption, screen
-  lock and pending updates
-- **enrol_alert_relay** - enrols an ArrowMem key in the Guard alert relay: a
-  watchdog topic and a one-time family link a trusted person can use to check
-  on you if a call sounds like you and asks for money
-
 ## About
 
 Built by ArrowMem Inc. https://arrowmem.ca
